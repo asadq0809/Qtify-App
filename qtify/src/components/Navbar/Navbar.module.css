@@ -1,0 +1,17 @@
+:root {
+    --color-main: #34c94b;
+    --color-dark: #121212;
+    --color-light: #ffffff;
+    --font-family: "Poppins";
+}
+
+.navbar {
+    box-sizing: border-box;
+    background-color: var(--color-main);
+    height: 74px;
+    width: 100vw;
+    padding: 0px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
