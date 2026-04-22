@@ -13,7 +13,7 @@ function Navbar({ searchData }) {
             </Link>
             <Search placeholder="Search a song of your choice" searchData={searchData} />
             {/* <Button>Give Feedback</Button> */}
-            <Button value="Give Feedback" />
+            <Button value="Give Feedback" className={styles.button} />
         </nav>
     );
 }
