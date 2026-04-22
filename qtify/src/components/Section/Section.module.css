@@ -1,0 +1,38 @@
+.container {
+    background-color: #121212;
+}
+
+.section {
+    /* margin-top: 32px; */
+    padding: 80px 0;
+    max-width: 1384px;
+    margin: 0 auto;
+}
+
+/* Top Albums + Collapse */
+.header {
+    display: flex;
+    justify-content: space-between; /* horizontal spacing */
+    align-items: center;
+    margin-bottom: 16px; /* vertical spacing */
+}
+
+.header h2 {
+    color: white;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: var(--color-main);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
+    gap: 40px;
+}
