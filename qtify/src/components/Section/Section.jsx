@@ -21,21 +21,19 @@ function Section({ title, apiEndpoint }) {
     }, [apiEndpoint]);
 
     return (
-        <div className={styles.container}>
-            <div className={styles.section}>
-                <div className={styles.header}>
-                    <h2>{title}</h2>
-                    <button onClick={() => setCollapsed(!collapsed)}>{collapsed ? "Show All" : "Collapse"}</button>
-                </div>
-
-                {!collapsed && (
-                    <div className={styles.grid}>
-                        {data.map((album) => (
-                            <AlbumCard key={album.id} album={album} />
-                        ))}
-                    </div>
-                )}
+        <div className={styles.section}>
+            <div className={styles.header}>
+                <h2>{title}</h2>
+                <button onClick={() => setCollapsed(!collapsed)}>{collapsed ? "Show All" : "Collapse"}</button>
             </div>
+
+            {!collapsed && (
+                <div className={styles.grid}>
+                    {data.map((album) => (
+                        <AlbumCard key={album.id} album={album} />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
