@@ -13,7 +13,7 @@ function Section({ title, apiEndpoint }) {
             try {
                 const res = await axios.get(apiEndpoint);
                 setData(res.data);
-                console.log(res);
+                // console.log(res);
             } catch (err) {
                 console.log(err);
             }
@@ -29,7 +29,7 @@ function Section({ title, apiEndpoint }) {
             </div>
 
             {data?.length > 0 && collapsed ? (
-                <Carousel data={data} />
+                <Carousel data={data} id={title.replace(/\s+/g, "")} />
             ) : (
                 <div className={styles.grid}>
                     {data.map((album) => (
