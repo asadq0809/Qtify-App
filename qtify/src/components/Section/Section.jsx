@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Section.module.css";
 import AlbumCard from "../AlbumCard/AlbumCard";
+import Carousel from "../Carousel/Carousel";
 
 function Section({ title, apiEndpoint }) {
     const [data, setData] = useState([]);
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,7 +28,9 @@ function Section({ title, apiEndpoint }) {
                 <button onClick={() => setCollapsed(!collapsed)}>{collapsed ? "Show All" : "Collapse"}</button>
             </div>
 
-            {!collapsed && (
+            {data?.length > 0 && collapsed ? (
+                <Carousel data={data} />
+            ) : (
                 <div className={styles.grid}>
                     {data.map((album) => (
                         <AlbumCard key={album.id} album={album} />

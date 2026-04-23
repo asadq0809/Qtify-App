@@ -1,13 +1,9 @@
 import React from "react";
 import MuiCard from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
-import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import styles from "./AlbumCard.module.css";
-import albumCover from "../../assets/album_cover.jpg";
 
 function AlbumCard({ album }) {
     // console.log(styles);

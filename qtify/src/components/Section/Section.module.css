@@ -13,10 +13,6 @@
     margin-bottom: 16px; /* vertical spacing */
 }
 
-.header h2 {
-    color: white;
-}
-
 .header button {
     background: none;
     border: none;

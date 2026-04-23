@@ -2,7 +2,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Card from "./components/AlbumCard/AlbumCard";
 import Section from "./components/Section/Section";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./theme";
