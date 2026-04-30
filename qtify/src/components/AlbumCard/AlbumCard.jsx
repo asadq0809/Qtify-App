@@ -5,7 +5,9 @@ import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-function AlbumCard({ album }) {
+function AlbumCard({ album, type }) {
+    const value = type === "song" ? album.likes : album.follows;
+    const label = type === "song" ? "Likes" : "Follows";
     // console.log(styles);
     return (
         <Box sx={{ width: 159, textAlign: "left", overflow: "hidden" }}>
@@ -17,7 +19,7 @@ function AlbumCard({ album }) {
                             backgroundColor: "#000",
                             color: "#fff",
                         }}
-                        label={`${album.follows} follows`}
+                        label={`${value} ${label}`}
                     />
                 </Box>
             </MuiCard>

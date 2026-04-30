@@ -33,7 +33,7 @@ function Section({ title, apiEndpoint }) {
             ) : (
                 <div className={styles.grid}>
                     {data.map((album) => (
-                        <AlbumCard key={album.id} album={album} />
+                        <AlbumCard key={album.id} album={album} type="album" />
                     ))}
                 </div>
             )}

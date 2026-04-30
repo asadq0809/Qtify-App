@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import AlbumCard from "../AlbumCard/AlbumCard";
 import styles from "./Carousel.module.css";
 
-function Carousel({ data, id }) {
+function Carousel({ data, type }) {
     // console.log(data);
     // data.map((ele) => {
     //     console.log(ele);
@@ -17,24 +17,24 @@ function Carousel({ data, id }) {
     return (
         <>
             <div className={styles.carouselWrapper}>
-                <LeftArrow className={`${styles.arrow} ${styles.left} prev-${id}`} />
-                <RightArrow className={`${styles.arrow} ${styles.right} next-${id}`} />
+                <LeftArrow className={`${styles.arrow} ${styles.left} prev-swipper-button`} />
+                <RightArrow className={`${styles.arrow} ${styles.right} next-swipper-button`} />
                 <Swiper
                     modules={[Navigation]}
                     slidesPerView={"auto"}
                     navigation={{
-                        prevEl: `.prev-${id}`,
-                        nextEl: `.next-${id}`,
+                        prevEl: `.prev-swipper-button`,
+                        nextEl: `.next-swipper-button`,
                     }}
                     onBeforeInit={(swiper) => {
-                        swiper.params.navigation.prevEl = `.prev-${id}`;
-                        swiper.params.navigation.nextEl = `.next-${id}`;
+                        swiper.params.navigation.prevEl = `.prev-swipper-button`;
+                        swiper.params.navigation.nextEl = `.next-swipper-button`;
                     }}
                     // navigation={true}
                 >
                     {data.map((ele) => (
                         <SwiperSlide key={ele.id} style={{ width: "200px" }}>
-                            <AlbumCard album={ele} />
+                            <AlbumCard album={ele} type={type} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

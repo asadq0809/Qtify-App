@@ -1,0 +1,35 @@
+.section {
+    margin-top: 32px;
+    max-width: 1384px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* horizontal spacing */
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 16px; /* vertical spacing */
+}
+
+.tabs {
+    margin: 16px 0;
+}
+
+/* remove default indicator */
+:global(.MuiTabs-indicator) {
+    display: none;
+}
+
+/* default tab */
+:global(.MuiTab-root) {
+    color: #888;
+    text-transform: none;
+    font-weight: 500;
+}
+
+/* selected tab */
+:global(.Mui-selected) {
+    color: #34c94b !important;
+}
