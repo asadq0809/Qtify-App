@@ -6,10 +6,5 @@
     border-radius: 8px;
     font-weight: 600;
     font-family: var(--font-family);
-    cursor: default;
-}
-
-.FeedbackButton:hover {
-    /* opacity: 0.9; */
     cursor: pointer;
 }
