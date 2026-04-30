@@ -16,6 +16,9 @@
     justify-content: space-between;
 }
 
-.button {
+.feedbackbtn {
+    cursor: default;
+}
+.feedbackbtn:hover {
     cursor: pointer;
 }
