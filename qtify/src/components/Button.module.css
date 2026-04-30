@@ -1,4 +1,4 @@
-.button {
+.FeedbackButton {
     background-color: var(--color-dark);
     color: var(--color-main);
     padding: 10px 16px;
@@ -6,9 +6,10 @@
     border-radius: 8px;
     font-weight: 600;
     font-family: var(--font-family);
+    cursor: default;
 }
 
-.button:hover {
+.FeedbackButton:hover {
     /* opacity: 0.9; */
     cursor: pointer;
 }
